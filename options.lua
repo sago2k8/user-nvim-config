@@ -1,6 +1,6 @@
 return {
   opt = {
-    conceallevel = 2, -- enable conceal
+    conceallevel = 0, -- enable conceal
     foldenable = false,
     foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
     foldmethod = "expr",

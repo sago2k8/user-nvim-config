@@ -1,7 +1,6 @@
 return {
   ["goolord/alpha-nvim"] = { disable = true },
   ["max397574/better-escape.nvim"] = { disable = true },
-
   ["andymass/vim-matchup"] = { after = "nvim-treesitter" },
   ["arsham/indent-tools.nvim"] = {
     opt = true,
@@ -43,6 +42,7 @@ return {
     opt = true,
     setup = function() table.insert(astronvim.file_plugins, "vim-sandwich") end,
   },
+  ["mfussenegger/nvim-dap"] = { opt = true, setup = function() table.insert(astronvim.file_plugins, "nvim-dap") end },
   ["mxsdev/nvim-dap-vscode-js"] = {
     after = "mason-nvim-dap.nvim",
     config = function() require "user.plugins.nvim-dap-vscode-js" end,
@@ -93,5 +93,15 @@ return {
   ["ziontee113/syntax-tree-surfer"] = {
     module = "syntax-tree-surfer",
     config = function() require "user.plugins.syntax-tree-surfer" end,
+  },
+  ["lukas-reineke/headlines.nvim"] = {
+    config = function() require("headlines").setup() end,
+  },
+  ["fladson/vim-kitty"] = { opt = true },
+  ["morhetz/gruvbox"] = { opt = true },
+  ["rebelot/kanagawa.nvim"] = {
+    module = "kanagawa",
+    event = "ColorScheme",
+    config = function() require "user.plugins.kanagawa" end,
   },
 }
